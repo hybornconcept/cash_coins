@@ -279,10 +279,7 @@ def coin_name():
 def crypto_charts(coin,  days, key):
     spacermain(st, 2)
     st.write(
-        '<style>div.row-widget.stRadio > div{flex-direction:row;justify-content: center;} </style>', unsafe_allow_html=True)
-
-    st.write(
-        '<style>div.st-bf{flex-direction:column;} div.st-ag{font-weight:bold;padding-left:2px;}</style>', unsafe_allow_html=True)
+        '<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
     radio = st.radio(label=' ', options=[
                      '1d', '7d', '30d', '90d', '180d', '365d'], key={key})
