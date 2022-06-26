@@ -27,6 +27,7 @@ hide_things = """
 #MainMenu { visibility: hidden;}
 footer { visibility:hidden;}
 header { visibility:hidden;}
+div.st-b4.st-eb.st-ec.st-ed.st-dr.st-ee{flex-direction:row;}
 </style>
 """
 st.markdown(hide_things, unsafe_allow_html=True)
@@ -278,8 +279,6 @@ def coin_name():
 
 def crypto_charts(coin,  days, key):
     spacermain(st, 2)
-    st.write(
-        '<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
     radio = st.radio(label=' ', options=[
                      '1d', '7d', '30d', '90d', '180d', '365d'], key={key})
