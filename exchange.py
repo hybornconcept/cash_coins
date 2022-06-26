@@ -11,12 +11,13 @@ import os
 from dotenv import load_dotenv
 
 
+st.set_page_config(
+    layout="wide", initial_sidebar_state="expanded", page_icon=':moneybag:')
 os.environ["API_KEY"] == st.secrets["API_KEY"]
 api_key = os.environ["API_KEY"]
 # api_key = "75a59256-92a1-4fd2-af79-9592946e0458"
 # setting the page layout
-st.set_page_config(
-    layout="wide", initial_sidebar_state="expanded", page_icon=':moneybag:')
+
 
 # styling the page layout
 # with open('style.css') as f:
