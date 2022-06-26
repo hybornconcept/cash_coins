@@ -13,9 +13,9 @@ from dotenv import load_dotenv
 
 st.set_page_config(
     layout="wide", initial_sidebar_state="expanded", page_icon=':moneybag:')
-os.environ["API_KEY"] == st.secrets["API_KEY"]
-api_key = os.environ["API_KEY"]
-# api_key = "75a59256-92a1-4fd2-af79-9592946e0458"
+# os.environ["API_KEY"] == st.secrets["API_KEY"]
+# api_key = os.environ["API_KEY"]
+api_key = "75a59256-92a1-4fd2-af79-9592946e0458"
 # setting the page layout
 
 
@@ -27,7 +27,6 @@ hide_things = """
 #MainMenu { visibility: hidden;}
 footer { visibility:hidden;}
 header { visibility:hidden;}
-div.st-b4.st-eb.st-ec.st-ed.st-dr.st-ee{flex-direction:row;}
 </style>
 """
 st.markdown(hide_things, unsafe_allow_html=True)
@@ -294,7 +293,8 @@ def crypto_charts(coin,  days, key):
         days = 180
     elif radio == '365d':
         days = 365
-
+    st.write(
+        '<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     url = 'https://api.coingecko.com/api/v3/coins/{coin}/ohlc?vs_currency=usd&days={days}'.format(
         coin=coin.lower(), days=str(days))
 
